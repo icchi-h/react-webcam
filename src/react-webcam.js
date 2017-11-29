@@ -145,10 +145,10 @@ export default class Webcam extends Component {
         let videoSource = null;
 
         devices.forEach((device) => {
-          if (device.kind === 'audio') {
-            audioSource = device.id;
-          } else if (device.kind === 'video') {
-            videoSource = device.id;
+          if (device.kind === 'audioinput') {
+            audioSource = device.deviceId;
+          } else if (device.kind === 'videoinput') {
+            videoSource = device.deviceId;
           }
         });
 
@@ -163,10 +163,10 @@ export default class Webcam extends Component {
         let videoSource = null;
 
         sources.forEach((source) => {
-          if (source.kind === 'audio') {
-            audioSource = source.id;
-          } else if (source.kind === 'video') {
-            videoSource = source.id;
+          if (source.kind === 'audioinput') {
+            audioSource = source.deviceId;
+          } else if (source.kind === 'videoinput') {
+            videoSource = source.deviceId;
           }
         });
 
